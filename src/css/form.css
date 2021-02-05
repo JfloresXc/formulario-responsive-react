@@ -1,0 +1,90 @@
+.form{
+    background: #EAF1EA;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.5em;
+    grid-row-gap: 0.625em;
+    padding: 2em;
+    transition: .3s linear all;
+}
+
+.form__group-terms,
+.form__group-message-submit-error,
+.form__group-button-submit{
+    grid-column: 1/3;
+}
+
+.form__terms{
+    font-size: 1.5em;
+}
+
+.form__group-message-submit-error{
+    width: 100%;
+    padding: 1em;
+    border-radius: 10px;
+    background: #d62e2e;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: whitesmoke;
+    display: none;
+}
+
+.form__group-button-submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__button-submit{
+    width: 300px;
+    padding: .5em 1em;
+    margin: 1em 0 .8em;
+    border: none;
+    background: #6D9773;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: .3s ease all;
+    cursor: pointer;
+    outline: none;
+}
+
+.form__button-submit:hover{
+    background: #516e55;
+    color: whitesmoke;
+}
+
+.form__message-success{
+    color: #2ed666;
+    font-size: 1.5em;
+    display: none;
+}
+
+/*Modifiers*/
+.form__wrong .form__group-message-submit-error{
+    display: flex;
+}
+
+.form__success .form__message-success{
+    display: block;
+}
+
+@media screen and (max-width: 576px){
+    .form{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    .form__group-terms,
+    .form__group-message-submit-error,
+    .form__group-button-submit{
+        grid-column: 1/2;
+    }
+    .form__button-submit{
+        width: 100%;
+    }
+
+}

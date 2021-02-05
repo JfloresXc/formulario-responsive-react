@@ -1,0 +1,68 @@
+.form__group{
+    /* background: #D08D66; */
+    padding: 1em .5em;
+}
+
+.form__title-input{
+    font-size: 1.6875em;
+    padding: 0 0.625em;
+}
+
+.form__group-input{
+    position: relative;
+}
+
+.form__input{
+    width: 100%;
+    padding: .8em;
+    margin: .5em 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.0625em;
+    border: 1px solid transparent;
+}
+
+.form__input:focus{
+    outline: none;
+    border: 1px solid #167bff;
+}
+
+.form__icon{
+    position: absolute;
+    top: 25px;
+    right: 13px;
+    font-size: 1.5625em;
+}
+
+.form__message-error{
+    padding: 0 0.625rem;
+    display: none;
+}
+
+/*Mofiers*/
+.form__group-wrong .form__title-input{
+    color: #d62e2e;
+}
+
+.form__group-wrong .form__input{
+    border: 1px solid #d62e2e;
+}
+
+.form__group-wrong .form__icon{
+    color: #d62e2e;
+}
+
+.form__group-wrong .form__message-error{
+    display: block;
+}
+
+.form__group-success .form__icon{
+    color: #2ed666;
+}
+
+@media screen and (max-width: 768px){
+    .form__icon{
+        top: 18px;
+        right: 10px;
+    }
+}
